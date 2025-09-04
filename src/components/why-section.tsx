@@ -21,7 +21,7 @@ const reasons = [
 
 export const WhySection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-accent/20 to-background">
+    <section id="why" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -34,7 +34,7 @@ export const WhySection = () => {
             Why JetEnd?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Built by developers, for developers who want to ship faster without compromising on code quality.
+            Built by JavaScript developers, for JavaScript developers who want to ship faster without compromising on code quality.
           </p>
         </motion.div>
 

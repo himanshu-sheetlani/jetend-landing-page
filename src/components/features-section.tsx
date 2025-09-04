@@ -13,7 +13,7 @@ const features = [
   {
     icon: Zap,
     title: "One-liner Routes",
-    description: "Create GET, POST, PATCH, DELETE routes with simple, intuitive syntax. No boilerplate needed."
+    description: "Create GET, POST, PATCH, DELETE routes with simple, intuitive JavaScript syntax. No boilerplate needed."
   },
   {
     icon: Database,
@@ -37,14 +37,14 @@ const features = [
   },
   {
     icon: Code,
-    title: "TypeScript Ready",
-    description: "Full TypeScript support with intelligent autocomplete and type safety."
+    title: "JavaScript First",
+    description: "Pure JavaScript library designed for speed and simplicity. No complex build steps required."
   }
 ];
 
 export const FeaturesSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="features" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

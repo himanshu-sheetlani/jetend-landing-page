@@ -5,16 +5,24 @@ import { Github, BookOpen, ArrowRight } from "lucide-react";
 
 const sampleCode = `import { get, post } from "jetend";
 
-get("/", (req, res) => res.send("Hello JetEnd!"));
-post("/user", ({ req, res }) => res.json(req.body));`;
+// Simple API routes in seconds
+get("/users", (req, res) => {
+  res.json({ users: [] });
+});
+
+post("/login", (req, res) => {
+  // Built-in auth helpers
+  const token = jwt.sign(req.body);
+  res.json({ token });
+});`;
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden pt-20">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-brand-secondary/20 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
@@ -44,7 +52,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-xl text-muted-foreground leading-relaxed max-w-lg"
               >
-                Utility-first toolkit for Express.js with one-liner routes, database helpers, auth, and more.
+                JavaScript toolkit for Express.js with one-liner routes, database helpers, auth, and more.
               </motion.p>
             </div>
 

@@ -60,7 +60,10 @@ export default {
 				code: {
 					bg: 'hsl(var(--code-bg))',
 					text: 'hsl(var(--code-text))',
-					accent: 'hsl(var(--code-accent))'
+					accent: 'hsl(var(--code-accent))',
+					comment: 'hsl(var(--code-comment))',
+					keyword: 'hsl(var(--code-keyword))',
+					string: 'hsl(var(--code-string))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
