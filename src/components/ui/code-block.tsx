@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 
-export const CodeBlock = ({ code, title, className = "" }) => {
+interface CodeBlockProps {
+  code: string;
+  title?: string;
+  className?: string;
+}
+
+export const CodeBlock = ({ code, title, className = "" }: CodeBlockProps) => {
   // Syntax highlighting for JavaScript
-  const highlightCode = (code) => {
+  const highlightCode = (code: string) => {
     return code
       .replace(/(import|from|const|let|var|function|export|default|return)/g, '<span class="text-code-keyword">$1</span>')
       .replace(/(".*?")/g, '<span class="text-code-string">$1</span>')
